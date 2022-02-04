@@ -1,6 +1,10 @@
-import video from "../data/video.js";
+import video from "../data/video";
+import 'semantic-ui-css/semantic.min.css';
+import Comments from "./Comments";
+import Details from "./Details";
 
 function App() {
+
   console.log("Here's your data:", video);
 
   return (
@@ -8,11 +12,14 @@ function App() {
       <iframe
         width="919"
         height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        src={video.embedUrl}
         frameBorder="0"
         allowFullScreen
         title="Thinking in React"
       />
+     <Details />
+     <Comments />
+     
     </div>
   );
 }
